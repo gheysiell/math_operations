@@ -5,69 +5,84 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/et_a"
+    
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:hint="Primeiro número" />
-
-    <EditText
-        android:id="@+id/et_b"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:hint="Segundo número" />
-
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:title="Math Operations"
+        app:titleTextColor="@android:color/white"/>
+    
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/et_a"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:text="+" />
+            android:hint="Primeiro número" />
 
-        <Button
-            android:id="@+id/btn_subtraction"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/et_b"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:text="-" />
+            android:hint="Segundo número" />
 
-        <Button
-            android:id="@+id/btn_multiplication"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:text="*" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn_division"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btn_subtraction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/btn_multiplication"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/btn_division"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="/" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:text="/" />
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Resultado"
+            android:textSize="24sp" />
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/result_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:text="Resultado"
-        android:textSize="24dp" />
 
 </LinearLayout>
